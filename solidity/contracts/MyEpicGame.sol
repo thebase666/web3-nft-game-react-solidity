@@ -157,7 +157,7 @@ contract MyEpicGame is ERC721 {
     function attackBoss() public {
         // storage的player直接挂钩map表 改动player就改动map表 tokenURI和checkIfUserHasNFT返回的就是map表内容
         // tokenURI给nftmarket返回状态 checkIfUserHasNFT给前端react返回状态
-        // 只有这个位置用来storage 其他都是memory
+        // 只有这个位置用了storage 其他都是memory
         // function getBigBoss() public view returns (BigBoss memory) {return bigBoss; }
         // 直接调用初始的bigBoss变量修改 bigBoss不是nft 初始的defaultCharacters没有改
         uint256 nftTokenIdOfPlayer = nftHolders[msg.sender];
